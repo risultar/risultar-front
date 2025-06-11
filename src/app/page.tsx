@@ -12,7 +12,7 @@ const playfair = Playfair_Display({
 
 export default function Home() {
   return (
-    <main className="w-full h-screen grid grid-cols-1 md:grid-cols-3 gap-0 bg-[#EFEEEA]">
+    <main className="w-full h-screen grid grid-cols-1 md:grid-cols-3 gap-0 bg-[#f9f8f7]">
       <div className="p-4 hidden md:block">
         <div className="w-full h-full bg-[#30463A] rounded-xl flex items-center justify-center">
           <div
@@ -32,11 +32,19 @@ export default function Home() {
       </div>
 
       <div className="col-span-1 md:col-span-2 flex items-center justify-center">
-        <div className="space-y-6 p-4 md:p-0">
+        <div className="space-y-6 p-6 border-[2] rounded-lg">
           <div className="flex flex-col gap-2">
-            <strong className={`text-2xl font-bold ${playfair.className}`}>
-              Bem Vindo à Risultar
-            </strong>
+            <div className="flex w-full justify-center">
+              <Image
+                src="/risultar-name.png"
+                alt="Logo Risultar"
+                className="mb-4"
+                width={200}
+                height={100}
+                quality={100}
+                priority
+              />
+            </div>
 
             <span className="opacity-80 text-sm font-medium">
               Preencha suas informações para começar a usar o sistema.
