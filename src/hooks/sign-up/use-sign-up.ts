@@ -3,6 +3,7 @@
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import {  isValidPhoneNumber } from "libphonenumber-js";
 
 const formSchema = z
 	.object({
@@ -12,6 +13,18 @@ const formSchema = z
 		email: z.string().email({
 			message: "Digite um email válido.",
 		}),
+		phone: z.string().refine(
+			(phone) => {
+				try {
+					return isValidPhoneNumber(phone, "BR");
+				} catch {
+					return false;
+				}
+			},
+			{
+				message: "Digite um telefone brasileiro válido.",
+			}
+		),
 		password: z.string().min(6, {
 			message: "Senha deve ter pelo menos 6 caracteres.",
 		}),
@@ -30,6 +43,7 @@ export function useSignUp() {
 		defaultValues: {
 			name: "",
 			email: "",
+			phone: "",
 			password: "",
 			confirmPassword: "",
 		},

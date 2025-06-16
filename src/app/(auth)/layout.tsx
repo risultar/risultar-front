@@ -22,10 +22,21 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
 				</div>
 			</div>
 
-			<div className="col-span-1 md:col-span-2 flex items-center justify-center px-4">
+			<div className="col-span-1 md:col-span-2 flex flex-col gap-6 items-center justify-center px-4">
 				<div className="space-y-6 p-6 border-[2] rounded-lg w-[500px]">
 					<div className="flex flex-col gap-2">
-						<div className="flex w-full justify-center">
+						<div className="flex w-full flex-col items-center justify-center gap-4">
+							<div className="md:hidden p-1 flex items-center justify-center bg-[#395547] rounded-xl shadow-lg">
+								<Image
+									src="/risultar.png"
+									alt="Logo Risultar"
+									width={50}
+									height={50}
+									quality={100}
+									priority
+								/>
+							</div>
+
 							<h1 className="text-4xl text-risultar">Risultar</h1>
 						</div>
 

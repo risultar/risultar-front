@@ -5,6 +5,7 @@ import { Form } from "@/components/ui/form";
 import { FormInput } from "@/components/form/form-input";
 import { useSignUp } from "@/hooks/sign-up/use-sign-up";
 import Link from "next/link";
+import { FormPhoneInput } from "../form/form-phone-input";
 
 export function SignUpForm() {
 	const { form, onSubmit } = useSignUp();
@@ -25,6 +26,13 @@ export function SignUpForm() {
 					type="email"
 					label="Email"
 					placeholder="Digite o seu email"
+				/>
+
+				<FormPhoneInput
+					form={form}
+					entity="phone"
+					label="Celular"
+					placeholder="Digite o seu celular"
 				/>
 
 				<FormInput
