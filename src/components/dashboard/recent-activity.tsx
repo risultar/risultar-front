@@ -3,16 +3,9 @@ import { Button } from "../ui/button";
 export function RecentActivity() {
 	return (
 		<div className="bg-white rounded-2xl p-6 border border-gray-100">
-			<div className="flex items-center justify-between mb-6">
-				<h3 className="text-lg font-semibold text-finguard-text">
-					Atividades Recentes
-				</h3>
-
-				<Button variant="link">
-					{" "}
-					<span>Ver Todas</span>
-				</Button>
-			</div>
+			<h3 className="text-lg font-semibold text-finguard-text">
+				Atividades Recentes
+			</h3>
 
 			<div className="space-y-2">
 				<div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
@@ -44,6 +37,12 @@ export function RecentActivity() {
 						<p className="text-xs text-gray-500 mt-1">Ontem, 10:15</p>
 					</div>
 				</div>
+			</div>
+
+			<div className="w-full flex self-end mt-auto justify-end">
+				<Button variant="link" className="text-muted-foreground">
+					Ver Todas
+				</Button>
 			</div>
 		</div>
 	);

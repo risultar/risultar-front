@@ -14,11 +14,11 @@ export default function Dashboard() {
 					<TerritoryGrowthCard />
 
 					<div className="col-span-2">
-						<MetricsSummary />
+						<DigitalTerritories />
 					</div>
 
 					<div className="col-span-2">
-						<DigitalTerritories />
+						<MetricsSummary />
 					</div>
 
 					<RecentActivity />

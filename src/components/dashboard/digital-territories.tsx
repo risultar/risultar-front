@@ -16,10 +16,16 @@ export const digitalTerritories = [
 
 export function DigitalTerritories() {
 	return (
-		<div className="flex bg-white w-full rounded-xl flex-col p-6 gap-6">
-			<h3 className="text-lg font-semibold text-finguard-text">
-				Territórios Digitais
-			</h3>
+		<div className="flex bg-white w-full rounded-xl flex-col p-6 gap-6 h-[300px]">
+			<div className="flex w-full items-center justify-between">
+				<h3 className="text-lg font-semibold text-finguard-text">
+					Territórios Digitais
+				</h3>
+
+				<Button variant="outline" className="rounded-full">
+					Criar Território Digital
+				</Button>
+			</div>
 
 			{digitalTerritories.map((territory) => (
 				<div key={territory.id} className="flex justify-between">
@@ -33,7 +39,7 @@ export function DigitalTerritories() {
 
 					<div className="flex items-center gap-2">
 						<div
-							className={`text-xs flex items-center px-4 py-0.5 rounded-xl font-medium gap-2
+							className={`text-xs flex items-center w-[90px] justify-center px-4 py-0.5 rounded-xl font-medium gap-2
 						${
 							territory.active
 								? "bg-green-100 text-green-700"
@@ -45,7 +51,7 @@ export function DigitalTerritories() {
 									territory.active ? "bg-green-700" : "bg-red-700"
 								}`}
 							/>
-							Ativo
+							{territory.active ? "Ativo" : "Inativo"}
 						</div>
 
 						<Button variant="ghost" className="text-sm rounded-full h-6">
@@ -55,6 +61,10 @@ export function DigitalTerritories() {
 					</div>
 				</div>
 			))}
+
+			<div className="w-full flex self-end mt-auto justify-end">
+				<Button variant="link" className="text-muted-foreground">Ver Todos</Button>
+			</div>
 		</div>
 	);
 }
