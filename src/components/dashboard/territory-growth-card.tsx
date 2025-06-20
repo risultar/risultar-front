@@ -2,7 +2,10 @@ import { TrendingUp } from "lucide-react";
 
 export function TerritoryGrowthCard() {
 	return (
-		<div className="bg-risultar from-finguard-blue to-finguard-purple rounded-2xl p-6 text-white relative overflow-hidden">
+		<div
+			className="bg-risultar rounded-2xl p-6 text-white relative overflow-hidden
+			min-h-[300px]"
+		>
 			<div className="absolute top-4 right-4">
 				<button className="p-2 rounded-full bg-[#395445]">
 					<TrendingUp className="w-5 h-5" />

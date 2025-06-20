@@ -13,7 +13,10 @@ import {
 export function TerritorySelect() {
 	return (
 		<Select defaultValue="agencia-de-marketing">
-			<SelectTrigger className="rounded-full px-6 w-[250px]">
+			<SelectTrigger
+				className="rounded-full px-6 w-[250px] bg-white hover:bg-white/50
+			cursor-pointer"
+			>
 				<SelectValue placeholder="Selecione o território digital" />
 			</SelectTrigger>
 

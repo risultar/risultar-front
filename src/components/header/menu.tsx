@@ -16,7 +16,9 @@ export function Menu() {
 			<DropdownMenuTrigger asChild>
 				<div className="flex items-center gap-4 cursor-pointer">
 					<Avatar className="w-10 h-10">
-						<AvatarFallback>JD</AvatarFallback>
+						<AvatarFallback className="bg-white hover:bg-white/50">
+							JD
+						</AvatarFallback>
 					</Avatar>
 				</div>
 			</DropdownMenuTrigger>

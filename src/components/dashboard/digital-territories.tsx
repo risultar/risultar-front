@@ -16,7 +16,7 @@ export const digitalTerritories = [
 
 export function DigitalTerritories() {
 	return (
-		<div className="flex bg-white w-full rounded-xl flex-col p-6 gap-6 h-[300px]">
+		<div className="flex bg-white w-full rounded-xl flex-col p-6 gap-6">
 			<div className="flex w-full items-center justify-between">
 				<h3 className="text-lg font-semibold text-finguard-text">
 					Territórios Digitais
