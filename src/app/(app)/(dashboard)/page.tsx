@@ -2,6 +2,7 @@ import { TerritoryGrowthCard } from "@/components/dashboard/territory-growth-car
 import { RecentActivity } from "@/components/dashboard/recent-activity";
 import { DigitalTerritories } from "@/components/dashboard/digital-territories";
 import { MetricsSummary } from "@/components/metrics/metrics-summary";
+import { TerritoryGrowthChart } from "@/components/charts/territory-growth-card";
 
 export default function Dashboard() {
 	return (
@@ -14,6 +15,10 @@ export default function Dashboard() {
 
 			<div className="col-span-1 md:col-span-2 xl:col-span-3">
 				<MetricsSummary />
+			</div>
+
+			<div className="col-span-1 md:col-span-2 xl:col-span-3">
+				<TerritoryGrowthChart />
 			</div>
 		</div>
 	);

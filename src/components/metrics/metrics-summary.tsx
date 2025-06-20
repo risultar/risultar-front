@@ -1,5 +1,4 @@
 import { MetricsCard } from "./metrics-card";
-import { TerritorySelect } from "./territory-select";
 
 const metricsData = [
 	{
@@ -37,12 +36,6 @@ const metricsData = [
 export function MetricsSummary() {
 	return (
 		<div className="xl:col-span-3 flex flex-col w-full rounded-xl gap-6">
-			<div className="w-full flex items-center justify-between">
-				<h3 className="text-lg font-semibold text-finguard-text">Métricas</h3>
-
-				<TerritorySelect />
-			</div>
-
 			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
 				{metricsData.map((cardData, index) => (
 					<MetricsCard
