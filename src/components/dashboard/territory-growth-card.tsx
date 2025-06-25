@@ -4,7 +4,7 @@ export function TerritoryGrowthCard() {
 	return (
 		<div
 			className="bg-risultar rounded-2xl p-6 text-white relative overflow-hidden
-			min-h-[300px]"
+			min-h-[400px]"
 		>
 			<div className="absolute top-4 right-4">
 				<button className="p-2 rounded-full bg-[#395445]">

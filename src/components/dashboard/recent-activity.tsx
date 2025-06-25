@@ -21,20 +21,23 @@ const activities = [
 
 export function RecentActivity() {
 	return (
-		<div className="bg-white rounded-2xl p-6 space-y-4 border border-gray-100">
-			<h3 className="text-lg font-semibold text-finguard-text">
-				Atividades Recentes
-			</h3>
+		<div className="bg-white rounded-2xl p-6 space-y-4 border border-gray-100
+		flex flex-col justify-between">
+			<div className="flex flex-col gap-4">
+				<h3 className="text-lg font-semibold text-finguard-text">
+					Atividades Recentes
+				</h3>
 
-			<div className="space-y-2">
-				{activities.map((activity, index) => (
-					<ActivityCard
-						key={index}
-						color={activity.color}
-						title={activity.title}
-						time={activity.time}
-					/>
-				))}
+				<div className="space-y-2">
+					{activities.map((activity, index) => (
+						<ActivityCard
+							key={index}
+							color={activity.color}
+							title={activity.title}
+							time={activity.time}
+						/>
+					))}
+				</div>
 			</div>
 
 			<div className="w-full flex self-end mt-auto justify-end">

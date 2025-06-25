@@ -1,43 +1,38 @@
 import { ReactNode } from "react";
-import { Button } from "../ui/button";
 
 interface MetricItem {
 	label: string;
 	value: string | ReactNode;
 }
 
-interface ButtonItem {
-	label: string;
-	onClick?: () => void;
-}
-
 interface MetricsCardProps {
 	title: string;
+	value: string;
+	description: string;
 	metrics: MetricItem[];
-	buttons: ButtonItem[];
 }
 
-export function MetricsCard({ title, metrics, buttons }: MetricsCardProps) {
+export function MetricsCard({ title, description, metrics, value }: MetricsCardProps) {
 	return (
 		<div className="bg-white rounded-xl p-6 h-full flex flex-col">
-			<div className="flex flex-col gap-2">
+			<div className="flex flex-col gap-4">
 				<span className="font-semibold text-left">{title}</span>
-				{metrics.map((metric, index) => (
-					<span key={index}>
-						{metric.label}: <b>{metric.value}</b>
-					</span>
-				))}
 
-				<div className="mt-4 flex flex-col gap-2">
-					{buttons.map((button, index) => (
-						<Button
+				<div className="flex gap-2 items-end">
+					<strong className="text-2xl">{value}</strong>
+					<span className="text-lg text-muted-foreground">{description}</span>
+				</div>
+
+				<div className="grid grid-cols-3 gap-2">
+					{metrics.map((metric, index) => (
+						<span
 							key={index}
-							variant="outline"
-							className="rounded-full w-fit px-4 py-1"
-							onClick={button.onClick}
+							className="flex items-center text-xs gap-2 border px-2 py-1
+						rounded-xl justify-center"
 						>
-							{button.label}
-						</Button>
+							{metric.label}:{" "}
+							<span className="font-semibold">{metric.value}</span>
+						</span>
 					))}
 				</div>
 			</div>

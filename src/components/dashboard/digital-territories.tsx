@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Triangle } from "lucide-react";
 import { Button } from "../ui/button";
 
 export const digitalTerritories = [
@@ -16,19 +16,18 @@ export const digitalTerritories = [
 
 export function DigitalTerritories() {
 	return (
-		<div className="flex bg-white w-full rounded-xl flex-col p-6 gap-6">
+		<div className="flex bg-white w-full rounded-xl flex-col p-6 gap-2">
 			<div className="flex w-full items-center justify-between">
-				<h3 className="text-lg font-semibold text-finguard-text">
+				<h3 className="text-lg font-semibold text-finguard-text flex gap-2 items-center">
+					<Triangle size={20}/>
 					Territórios Digitais
 				</h3>
 
-				<Button variant="outline" className="rounded-full">
-					Criar Território Digital
-				</Button>
+				<Button className="rounded-full">Criar TD</Button>
 			</div>
 
 			{digitalTerritories.map((territory) => (
-				<div key={territory.id} className="flex justify-between">
+				<div key={territory.id} className="flex justify-between border border-muted rounded-lg p-2">
 					<div className="flex items-center gap-2">
 						<div className="flex w-10 h-10 items-center justify-center p-4 rounded-lg bg-muted">
 							<span>{territory.name[0]}</span>
@@ -63,7 +62,9 @@ export function DigitalTerritories() {
 			))}
 
 			<div className="w-full flex self-end mt-auto justify-end">
-				<Button variant="link" className="text-muted-foreground">Ver Todos</Button>
+				<Button variant="link" className="text-muted-foreground">
+					Ver Todos
+				</Button>
 			</div>
 		</div>
 	);

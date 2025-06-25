@@ -3,9 +3,10 @@ import { MetricsCard } from "./metrics-card";
 const metricsData = [
 	{
 		title: "BASE",
+		value: "€ 12.450",
+		description: "administrados nos últimos 30 dias",
 		metrics: [
 			{ label: "Ativos", value: "42" },
-			{ label: "Valor Financeiro", value: "€ 12.450" },
 			{ label: "Branding", value: "Completo" },
 			{ label: "Metas", value: "3/5 definidas" },
 		],
@@ -13,8 +14,9 @@ const metricsData = [
 	},
 	{
 		title: "REDE",
+		value: "7",
+		description: "redes conectadas",
 		metrics: [
-			{ label: "Redes Conectadas", value: "4" },
 			{ label: "Alcance Orgânico", value: "82.300" },
 			{ label: "Posts (30d)", value: "38" },
 			{ label: "Engajamento", value: "↑ 18%" },
@@ -23,13 +25,13 @@ const metricsData = [
 	},
 	{
 		title: "EDI",
+		value: "172",
+		description: "conversões realizadas",
 		metrics: [
 			{ label: "Plataformas", value: "1" },
 			{ label: "Investimento", value: "€ 3.650" },
-			{ label: "Conversões", value: "172" },
 			{ label: "ROI", value: "2,8x" },
 		],
-		buttons: [{ label: "Ver Campanhas" }, { label: "Otimizar Anúncios" }],
 	},
 ];
 
@@ -40,9 +42,10 @@ export function MetricsSummary() {
 				{metricsData.map((cardData, index) => (
 					<MetricsCard
 						key={index}
+						value={cardData.value}
 						title={cardData.title}
 						metrics={cardData.metrics}
-						buttons={cardData.buttons}
+						description={cardData.description}
 					/>
 				))}
 			</div>
