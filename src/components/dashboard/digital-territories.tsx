@@ -27,7 +27,7 @@ export function DigitalTerritories() {
 			</div>
 
 			{digitalTerritories.map((territory) => (
-				<div key={territory.id} className="flex justify-between rounded-lg p-2">
+				<div key={territory.id} className="flex justify-between rounded-lg py-2">
 					<div className="flex items-center gap-2">
 						<div className="flex w-10 h-10 items-center justify-center p-4 rounded-lg bg-muted">
 							<span>{territory.name[0]}</span>
