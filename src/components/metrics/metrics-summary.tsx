@@ -8,7 +8,7 @@ const metricsData = [
 		metrics: [
 			{ label: "Ativos", value: "42" },
 			{ label: "Branding", value: "Completo" },
-			{ label: "Metas", value: "3/5 definidas" },
+			{ label: "Metas", value: "3/5" },
 		],
 		buttons: [{ label: "Gerenciar Ativos" }, { label: "Editar Finanças" }],
 	},
@@ -17,9 +17,9 @@ const metricsData = [
 		value: "7",
 		description: "redes conectadas",
 		metrics: [
-			{ label: "Alcance Orgânico", value: "82.300" },
+			{ label: "Alcance", value: "82.300" },
 			{ label: "Posts (30d)", value: "38" },
-			{ label: "Engajamento", value: "↑ 18%" },
+			{ label: "Engajamento", value: "18%" },
 		],
 		buttons: [{ label: "Agendar Posts" }, { label: "Analisar Métricas" }],
 	},
@@ -29,7 +29,7 @@ const metricsData = [
 		description: "conversões realizadas",
 		metrics: [
 			{ label: "Plataformas", value: "1" },
-			{ label: "Investimento", value: "€ 3.650" },
+			{ label: "Investimento", value: "€3.650" },
 			{ label: "ROI", value: "2,8x" },
 		],
 	},

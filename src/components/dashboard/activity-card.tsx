@@ -8,7 +8,7 @@ export function ActivityCard({ color, title, time }: ActivityCardProps) {
 	return (
 		<div
 			className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-100
-		transition-colors cursor-pointer border border-muted"
+		transition-colors cursor-pointer"
 		>
 			<div className={`w-2 h-2 ${color} rounded-full mt-2 flex-shrink-0`}/>
 
