@@ -1,9 +1,10 @@
 import { Bell } from "lucide-react";
 import Image from "next/image";
+import { TerritorySelect } from "../metrics/territory-select";
 import { Button } from "../ui/button";
 import { Menu } from "./menu";
-import { TerritorySelect } from "../metrics/territory-select";
 import { Navbar } from "./navbar";
+import { OnboardingDialog } from "../onboarding/onboarding-dialog";
 
 export function Header() {
 	return (
@@ -22,6 +23,8 @@ export function Header() {
 			<Navbar />
 
 			<div className="flex items-center space-x-4">
+				<OnboardingDialog />
+
 				<TerritorySelect />
 
 				<Button

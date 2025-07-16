@@ -1,8 +1,9 @@
-import { TerritoryGrowthCard } from "@/components/dashboard/territory-growth-card";
-import { RecentActivity } from "@/components/dashboard/recent-activity";
-import { DigitalTerritories } from "@/components/dashboard/digital-territories";
-import { MetricsSummary } from "@/components/metrics/metrics-summary";
 import { TerritoryGrowthChart } from "@/components/charts/territory-growth-card";
+import { DigitalTerritories } from "@/components/dashboard/digital-territories";
+import { RecentActivity } from "@/components/dashboard/recent-activity";
+import { TerritoryGrowthCard } from "@/components/dashboard/territory-growth-card";
+import { MetricsSummary } from "@/components/metrics/metrics-summary";
+import { OnboardingDialog } from "@/components/onboarding/onboarding-dialog";
 
 export default function Dashboard() {
 	return (
